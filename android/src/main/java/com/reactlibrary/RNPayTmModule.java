@@ -64,10 +64,7 @@ public class RNPayTmModule extends ReactContextBaseJavaModule {
     paramMap.put("CALLBACK_URL", options.getString("CALLBACK_URL"));
     paramMap.put("CHECKSUMHASH", options.getString("CHECKSUMHASH"));
 
-    if (options.hasKey("MERC_UNQ_REF")) {
-        paramMap.put("MERC_UNQ_REF", options.getString("MERC_UNQ_REF"));
-    }
-
+     
     Log.d("RNPayTm", "INPUT PARAMS: " + paramMap);
 
     PaytmOrder Order = new PaytmOrder(paramMap);
